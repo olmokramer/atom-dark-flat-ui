@@ -2,4 +2,4 @@
 
 Dark and flat UI theme for Atom.
 
-![dark-flat-ui](screenshot.png)
+![dark-flat-ui](https://github.com/olmokramer/atom-dark-flat-ui/blob/master/screenshot.png)
