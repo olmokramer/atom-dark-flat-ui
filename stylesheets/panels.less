@@ -1,0 +1,32 @@
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+atom-panel {
+  .text(normal);
+  position: relative;
+
+  background-color: @tool-panel-background-color;
+}
+
+.inset-panel {
+  position: relative;
+  background-color: @inset-panel-background-color;
+}
+
+.panel-heading {
+  .text(normal);
+
+  background-color: @panel-heading-background-color;
+
+  .btn {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    @bg: @button-background-color;
+    @hover: @button-background-color-hover;
+    @selected: @button-background-color-selected;
+    @text: @text-color;
+    .btn-background(@bg, @hover, @selected, @text);
+  }
+}

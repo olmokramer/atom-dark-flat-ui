@@ -1,0 +1,73 @@
+@import "ui-variables";
+@tab-radius: 0;
+@modified-icon-width: 8px;
+@tab-skew: 0;
+@tab-bottom-border-height: 0;
+@tab-border: 0;
+@tab-bar-bottom-border-color: #111;
+@tab-max-width: 180px;
+
+.tab-bar {
+  height: @tab-height + @tab-bottom-border-height;
+  background: @tab-bar-background-color;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    max-width: @tab-max-width;
+    height: @tab-height;
+    line-height: @tab-height;
+    padding: 0 20px 0 15px;
+    color: @text-color;
+    background-color: @tab-background-color;
+    font-size: @font-size;
+
+    transition: color .1s, background-color .1s;
+    border: none;
+
+    &:first-child {
+      padding-left: 15px;
+    }
+
+    .close-icon {
+      top: 0;
+      text-align: right;
+      line-height: @tab-height;
+      color: @text-color;
+
+      &:hover {
+        color: @color-accent;
+      }
+    }
+
+    &.modified {
+      &:not(:hover) .close-icon {
+        top: (@tab-height - @modified-icon-width) / 2;
+        border-color: @color-accent;
+      }
+
+      &:hover .close-icon {
+        color: @color-accent;
+      }
+    }
+
+    &.active, &:hover {
+      color: @text-color-highlight;
+      background-color: @tab-background-color-active;
+    }
+  }
+
+  .placeholder {
+    height: @tab-height + @tab-bottom-border-height;
+    margin-left: -9px; // center between tabs
+    pointer-events: none;
+    &:after {
+      top: @tab-height + @tab-bottom-border-height - 2px;
+    }
+  }
+}

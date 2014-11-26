@@ -1,0 +1,25 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+atom-text-editor,
+atom-text-editor[mini] {
+  /deep/ .is-focused .cursor {
+    border-width: 0;
+    background-color: @background-color-highlight;
+    opacity: 1!important;
+    z-index: -1;
+  }
+
+  /deep/ .selection .region {
+    background-color: @background-color-highlight;
+  }
+}
+
+atom-text-editor[mini] {
+  color: @text-color-highlight;
+  padding-left: @component-padding / 2;
+
+  &.is-focused {
+    background-color: @super-duper-dark-gray;
+  }
+}

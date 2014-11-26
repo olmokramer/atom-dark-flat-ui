@@ -1,0 +1,12 @@
+@import "ui-variables";
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
+    background: @scrollbar-color;
+  }
+}
