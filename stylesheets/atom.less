@@ -1,11 +1,17 @@
 @import "ui-variables";
 
+*, *::before, *::after, * /deep/ * {
+  box-sizing: border-box;
+}
+
 .scrollbars-visible-always {
+  ::-webkit-scrollbar,
   /deep/ ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
   }
 
+  ::-webkit-scrollbar-thumb,
   /deep/ ::-webkit-scrollbar-thumb {
     background: @scrollbar-color;
   }

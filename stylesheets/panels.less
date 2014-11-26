@@ -2,11 +2,16 @@
 @import "ui-variables";
 @import "buttons";
 
+.tool-panel,
 atom-panel {
   .text(normal);
   position: relative;
 
   background-color: @tool-panel-background-color;
+
+  &.modal .select-list ol.list-group {
+    background-color: @gray;
+  }
 }
 
 .inset-panel {

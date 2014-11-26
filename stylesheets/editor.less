@@ -1,20 +1,52 @@
 @import "ui-variables";
 @import "ui-mixins";
 
+.editor,
+.editor.mini,
 atom-text-editor,
 atom-text-editor[mini] {
-  /deep/ .is-focused .cursor {
+  &.is-focused .cursor,
+  &::shadow .is-focused .cursor {
     border-width: 0;
     background-color: @background-color-highlight;
     opacity: 1!important;
     z-index: -1;
   }
+}
 
-  /deep/ .selection .region {
+.editor,
+atom-text-editor {
+  .indent-guide,
+  &::shadow .indent-guide {
+    color: @background-color-highlight;
+  }
+
+  .wrap-guide {
+    background-color: @background-color-highlight;
+  }
+
+  .selection .region,
+  &::shadow .selection .region {
+    background-color: @background-color-highlight;
+  }
+
+  .highlight-selected .region,
+  &::shadow .highlight-selected .region {
+    border: 1px solid @text-color-highlight;
+    z-index: 2;
+  }
+
+  .marker.color-highlight .region,
+  &::shadow .marker.color-highlight .region {
+    border-radius: 0;
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
     background-color: @background-color-highlight;
   }
 }
 
+.editor.mini,
 atom-text-editor[mini] {
   color: @text-color-highlight;
   padding-left: @component-padding / 2;

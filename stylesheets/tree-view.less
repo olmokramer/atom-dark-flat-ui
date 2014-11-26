@@ -1,8 +1,17 @@
 @import "ui-variables";
 @import "ui-mixins";
 
+.tree-view-scroller {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover::-webkit-scrollbar {
+    display: initial;
+  }
+}
+
 .tree-view {
-  font-size: @font-size;
   background: @tree-view-background-color;
 }
 
@@ -13,6 +22,5 @@
 }
 
 .focusable-panel {
-  opacity: 1;
   background: @tree-view-background-color;
 }

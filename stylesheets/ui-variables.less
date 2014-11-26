@@ -4,7 +4,7 @@
 @gray: #2d2d2d;
 @dark-gray: #222;
 @super-duper-dark-gray: #191919;
-@color-accent: #d64937;
+@color-accent: @text-color-warning;
 
 @text-color: #b0b0b0;
 @text-color-subtle: #666;
@@ -12,20 +12,20 @@
 @text-color-selected: @text-color-highlight;
 
 @text-color-info: #5293d8;
-@text-color-success: #26c26a;
-@text-color-warning: #ff982d;
+@text-color-success: #1e9451;
+@text-color-warning: #d64937;
 @text-color-error: #c00;
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
 @text-color-renamed: @text-color-info;
-@text-color-modified: @text-color-warning;
+@text-color-modified: #d64937;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
+@background-color-info: darken(@text-color-info, 10%);
+@background-color-success: darken(@text-color-success, 10%);
+@background-color-warning: darken(@text-color-warning, 15%);
+@background-color-error: darken(@text-color-error, 10%);
 @background-color-highlight: @gray;
 @background-color-selected: @light-gray;
 

@@ -48,7 +48,10 @@
 .select-list ol.list-group,
 &.select-list ol.list-group {
   li.two-lines {
-    .secondary-line { color: @text-color-subtle; }
+    .secondary-line {
+      color: @text-color-subtle;
+    }
+
     &.selected .secondary-line {
       color: @text-color;
       text-shadow: none;
@@ -59,7 +62,10 @@
   // know their size.
   li.selected {
     background-color: @background-color-selected;
-    &:before{ display: none; }
+
+    &:before{
+      display: none;
+    }
   }
 
   &.mark-active{
@@ -77,11 +83,14 @@
       height: @active-icon-size;
       width: @active-icon-size;
     }
+
     > li:not(.active):before {
       margin-right: @component-icon-padding;
     }
+
     li.active {
       .octicon(check, @active-icon-size);
+
       &:before {
         margin-right: @component-icon-padding;
         color: @text-color-success;
@@ -97,6 +106,7 @@
   border-radius: @component-border-radius;
   border: 1px solid @overlay-border-color;
 
+  .editor,
   atom-text-editor {
     margin-bottom: @component-padding/2;
   }
