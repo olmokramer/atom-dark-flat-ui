@@ -30,6 +30,12 @@ atom-text-editor {
     background-color: @background-color-highlight;
   }
 
+  .find-result .region,
+  &::shadow .find-result .region {
+    border: 1px solid @text-color-highlight;
+    z-index: 2;
+  }
+
   .highlight-selected .region,
   &::shadow .highlight-selected .region {
     border: 1px solid @text-color-highlight;
@@ -55,3 +61,4 @@ atom-text-editor[mini] {
     background-color: @super-duper-dark-gray;
   }
 }
+

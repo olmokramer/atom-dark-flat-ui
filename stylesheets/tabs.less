@@ -14,7 +14,7 @@
   }
 
   .tab {
-    max-width: @tab-max-width;
+    max-width: initial;
     height: @tab-height;
     line-height: @tab-height;
     padding: 0 20px 0 15px;
@@ -54,6 +54,10 @@
     &.active, &:hover {
       color: @text-color-highlight;
       background-color: @tab-background-color-active;
+    }
+
+    &.active {
+      -webkit-flex: 1;
     }
   }
 
