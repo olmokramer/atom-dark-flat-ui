@@ -10,6 +10,24 @@
 
 .pane-container,
 atom-pane-container {
+  .horizontal .pane,
+  atom-pane-axis.horizontal .pane {
+    border-right: 1px solid @pane-item-border-color;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .vertical .pane,
+  atom-pane-axis.vertical .pane {
+    border-bottom: 1px solid @pane-item-border-color;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
   .pane,
   atom-pane {
     background-color: @app-background-color;
