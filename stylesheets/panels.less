@@ -28,9 +28,9 @@ atom-panel {
     padding-left: 8px;
     padding-right: 8px;
 
-    @bg: @button-background-color;
-    @hover: @button-background-color-hover;
-    @selected: @button-background-color-selected;
+    @bg: darken(@button-background-color,3%);
+    @hover: darken(@button-background-color-hover, 3%);
+    @selected: darken(@button-background-color-selected,3%);
     @text: @text-color;
     .btn-background(@bg, @hover, @selected, @text);
   }
