@@ -1,3 +1,5 @@
 # Dark Flat UI
 
-Default dark UI theme for Atom.
+Dark and flat UI theme for Atom.
+
+![dark-flat-ui](screenshot.png)
