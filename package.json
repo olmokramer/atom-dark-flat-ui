@@ -1,11 +1,12 @@
 {
-  "name": "my-ui",
+  "name": "day-flat-ui",
   "theme": "ui",
   "version": "0.2.0",
-  "description": "A dark flat theme",
+  "description": "A dark flat ui theme",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
   "readmeFilename": "README.md"
 }
+
