@@ -91,21 +91,27 @@ body .settings-view {
 		.btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
 		border-color: @button-border-color;
 	}
+
 	.btn.btn-primary {
 		.btn-variant(@background-color-info);
 	}
+
 	.btn.btn-info {
 		.btn-variant(@background-color-info);
 	}
+
 	.btn.btn-success {
 		.btn-variant(@background-color-success);
 	}
+
 	.btn.btn-warning {
 		.btn-variant(@background-color-warning);
 	}
+
 	.btn.btn-error {
 		.btn-variant(@background-color-error);
 	}
+
 	.btn-group > .btn-default {
 		.btn();
 	}
@@ -113,20 +119,28 @@ body .settings-view {
 	.config-menu {
 		background: @dark-gray;
 		box-shadow: 0 0;
+		padding-top: 0;
 
 		.nav > li > a {
 			color: @text-color;
 		}
+
 		.nav > li > a:hover {
 			background: @background-color-highlight;
 			color: @text-color;
+			box-shadow: 0 0;
 		}
+
 		.nav > li.active > a {
 			background: @background-color-selected;
 			color: @text-color-selected;
 			.package-author {
 				color: @text-color-selected;
 			}
+		}
+
+		.nav-stacked > li + li {
+			margin-top: 0;
 		}
 	}
 
