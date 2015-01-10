@@ -1,19 +1,17 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-.editor,
-atom-text-editor {
-  /deep/ ::-webkit-scrollbar-thumb {
+atom-text-editor::shadow {
+  ::-webkit-scrollbar-thumb {
     background-color: @background-color-highlight;
   }
 
-  /deep/ ::-webkit-scrollbar-track,
-  /deep/ ::-webkit-scrollbar-corner {
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
     background-color: @dark-gray;
   }
 }
 
-.editor.mini,
 atom-text-editor[mini] {
   color: @text-color-highlight;
   padding-left: @component-padding / 2;
@@ -22,4 +20,3 @@ atom-text-editor[mini] {
     background-color: @super-duper-dark-gray;
   }
 }
-

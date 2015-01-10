@@ -5,20 +5,16 @@
 }
 
 .scrollbars-visible-always {
-  ::-webkit-scrollbar,
   /deep/ ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
   }
 
-  ::-webkit-scrollbar-track,
   /deep/ ::-webkit-scrollbar-track,
-  ::-webkit-scrollbar-corner,
   /deep/ ::-webkit-scrollbar-corner {
     background-color: @scrollbar-background-color;
   }
 
-  ::-webkit-scrollbar-thumb,
   /deep/ ::-webkit-scrollbar-thumb {
     background: @scrollbar-color;
   }

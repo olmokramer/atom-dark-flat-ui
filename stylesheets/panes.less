@@ -10,8 +10,7 @@
 
 .pane-container,
 atom-pane-container {
-  .horizontal .pane,
-  atom-pane-axis.horizontal .pane {
+  atom-pane-axis.horizontal  {
     border-right: 1px solid @pane-item-border-color;
 
     &:last-child {
@@ -19,8 +18,7 @@ atom-pane-container {
     }
   }
 
-  .vertical .pane,
-  atom-pane-axis.vertical .pane {
+  atom-pane-axis.vertical atom-pane {
     border-bottom: 1px solid @pane-item-border-color;
 
     &:last-child {
@@ -28,7 +26,6 @@ atom-pane-container {
     }
   }
 
-  .pane,
   atom-pane {
     background-color: @app-background-color;
   }
