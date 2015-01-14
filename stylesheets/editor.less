@@ -1,14 +1,15 @@
 @import "ui-variables";
 @import "ui-mixins";
+@import "syntax-variables";
 
 atom-text-editor::shadow {
   ::-webkit-scrollbar-thumb {
-    background-color: @background-color-highlight;
+    background-color: @syntax-gutter-text-color;
   }
 
   ::-webkit-scrollbar-track,
   ::-webkit-scrollbar-corner {
-    background-color: @dark-gray;
+    background-color: @syntax-background-color;
   }
 }
 
