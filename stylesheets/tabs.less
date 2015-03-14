@@ -54,7 +54,11 @@
 
     &.active, &:hover {
       color: @text-color-highlight;
-      background-color: @syntax-background-color;
+      background-color: @tab-background-color-active;
+
+      .dark-flat-ui-tab-syntax-background & {
+        background-color: @syntax-background-color;
+      }
     }
 
     &.active {

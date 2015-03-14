@@ -1,12 +1,12 @@
 {
   "name": "dark-flat-ui",
   "theme": "ui",
+  "main": "lib/dark-flat-ui",
   "version": "1.0.0",
   "description": "A dark flat ui theme",
   "repository": "https://github.com/olmokramer/atom-dark-flat-ui",
   "license": "MIT",
   "engines": {
     "atom": ">0.140.0"
-  },
-  "readmeFilename": "README.md"
+  }
 }
