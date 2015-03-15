@@ -16,8 +16,13 @@ atom-text-editor::shadow {
 atom-text-editor[mini] {
   color: @text-color-highlight;
   padding-left: @component-padding / 2;
+  background-color: @dark-flat-ui-dark-gray;
 
   &.is-focused {
     background-color: @dark-flat-ui-super-duper-dark-gray;
+  }
+
+  &::shadow .is-focused .selection .region {
+    background-color: @dark-flat-ui-light-gray!important;
   }
 }
