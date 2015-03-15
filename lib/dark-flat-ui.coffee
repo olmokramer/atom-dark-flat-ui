@@ -13,7 +13,6 @@ class DarkFlatUI
     @sub.dispose()
 
   update: (config) ->
-    console.log config
     workspaceView = atom.views.getView atom.workspace
     if config.tabSyntaxThemeBackground
       workspaceView.classList.add 'dark-flat-ui-tab-syntax-background'
