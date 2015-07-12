@@ -33,7 +33,7 @@
     }
   }
 
-  .generate-list-item-status-color(@text-color-subtle, ignored);
+  .generate-list-item-status-color(@text-color-ignored, ignored);
   .generate-list-item-status-color(@text-color-added, added);
   .generate-list-item-status-color(@text-color-renamed, renamed);
   .generate-list-item-status-color(@text-color-modified, modified);
@@ -106,12 +106,12 @@
   border-radius: @component-border-radius;
   border: 1px solid @overlay-border-color;
 
-  atom-text-editor {
-    margin-bottom: @component-padding/2;
+  atom-text-editor[mini] {
+    height: @component-line-height;
   }
 
   .list-group li {
-    padding-left: @component-padding/2;
+    padding-left: @component-padding / 2;
   }
 }
 

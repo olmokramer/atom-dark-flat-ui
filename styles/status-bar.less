@@ -1,0 +1,15 @@
+status-bar {
+  // accent colored underline
+  a:hover {
+    text-decoration: none!important;
+    background-size: 1px 1px;
+    background-repeat: repeat no-repeat;
+    background-position: 0 1.5em;
+
+    .transform(@color) {
+      background-image: linear-gradient(@color, @color);
+    }
+
+    .accent-transform();
+  }
+}

@@ -1,50 +1,110 @@
 @import "ui-variables";
 @import "ui-mixins";
 
+.btn-toolbar {
+  margin-left: 0;
+
+  > .btn-group,
+  > .btn {
+    &, + .btn-group,
+    &, + .btn {
+      margin-left: 0;
+      margin-right: @component-padding;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.btn-group {
+  &-xs .btn,
+  &-sm .btn {
+    padding: (@component-padding / 2) @component-padding;
+    font-size: 12px;
+  }
+
+  &-lg .btn{
+    padding: (@component-padding * 3 / 4) (@component-padding * 5 / 4);
+    font-size: 14px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus {
+  outline: none;
+}
+
 .btn-background (@color, @hover-color, @selected-color, @text-color) {
   color: @text-color;
   background-color: @color;
 
   &.selected,
-  &:hover {
-    color: @text-color-highlight;
-  }
-
-  &.selected {
-    background-color: @selected-color;
+  &.active,
+  &:active,
+  &:focus {
+    &.selected,
+    &.active,
+    &:active,
+    &:focus {
+      color: @text-color-highlight;
+      background-color: @selected-color;
+      border-color: transparent;
+    }
   }
 
   &:hover {
     background-color: @hover-color;
+    color: @text-color-highlight;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: 0 0 0 black;
   }
 }
 
 .btn-variant (@color) {
-  @bg: darken(@color, 10%);
-  @hover: @color;
-  @selected: @color;
+  @selected-color: lighten(@color, 5%);
+  @bg: @color;
+  @hover: @selected-color;
+  @selected: @selected-color;
   .btn-background(@bg, @hover, @selected, @text-color-highlight);
 }
 
 .btn {
-  .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+  &, &.btn-default {
+    .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+  }
+
+  &:not(.btn-primary):not(.btn-info):not(.btn-success):not(.btn-warning):not(.btn-error) {
+    &.icon:hover:before {
+      .accent(color);
+    }
+  }
+
+  &.btn-primary {
+    .btn-variant(lighten(@background-color-info, 12%));
+  }
+
+  &.btn-info {
+    .btn-variant(lighten(@background-color-info, 12%));
+  }
+
+  &.btn-success {
+    .btn-variant(lighten(@background-color-success, 10%));
+  }
+
+  &.btn-warning {
+    .btn-variant(lighten(@background-color-warning, 10%));
+  }
+
+  &.btn-error {
+    .btn-variant(lighten(@background-color-error, 5%));
+  }
 }
 
-.btn.btn-primary {
-  .btn-variant(@background-color-info);
-}
-.btn.btn-info {
-  .btn-variant(@background-color-info);
-}
-.btn.btn-success {
-  .btn-variant(@background-color-success);
-}
-.btn.btn-warning {
-  .btn-variant(@background-color-warning);
-}
-.btn.btn-error {
-  .btn-variant(@background-color-error);
-}
 
 .caret {
   border-top: 5px solid #fff;

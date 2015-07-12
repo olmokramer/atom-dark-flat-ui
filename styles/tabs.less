@@ -1,3 +1,4 @@
+@import "ui-mixins";
 @import "ui-variables";
 @import "syntax-variables";
 
@@ -24,7 +25,7 @@
     background-color: @tab-background-color;
     font-size: @font-size;
 
-    transition: color .2s, background-color .2s;
+    transition: color 200ms, background-color 200ms;
     border: none;
 
     &:first-child {
@@ -36,20 +37,21 @@
       text-align: right;
       line-height: @tab-height;
       color: @text-color;
+      transition: color 200ms;
 
       &:hover {
-        color: @color-accent;
+        .accent(color);
       }
     }
 
     &.modified {
       &:not(:hover) .close-icon {
         top: (@tab-height - @modified-icon-width) / 2;
-        border-color: @color-accent;
+        .accent(border-color);
       }
 
       &:hover .close-icon {
-        color: @color-accent;
+        .accent(color);
       }
     }
 
@@ -57,7 +59,7 @@
       color: @text-color-highlight;
       background-color: @tab-background-color-active;
 
-      .dark-flat-ui-tab-syntax-background &[data-type="TextEditor"] {
+      [data-dark-flat-ui-colored-tabs="true"] &[data-type="TextEditor"] {
         background-color: @syntax-background-color;
       }
     }
@@ -69,7 +71,7 @@
 
   .placeholder {
     height: @tab-height;
-    background-color: @color-accent;
+    .accent(background-color);
     pointer-events: none;
     &:after {
       display: none;

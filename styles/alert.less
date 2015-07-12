@@ -1,0 +1,30 @@
+@import "ui-variables";
+
+.alert {
+  border-radius: 0;
+  border: none;
+
+  &.icon:before {
+    margin-right: @component-padding;
+  }
+}
+
+.alert-info {
+  color: lighten(@text-color-info, 15%);
+  background-color: @background-color-info;
+}
+
+.alert-success {
+  color: lighten(@text-color-success, 10%);
+  background-color: @background-color-success;
+}
+
+.alert-warning {
+  color: lighten(@text-color-warning, 18%);
+  background-color: @background-color-warning;
+}
+
+.alert-error {
+  color: lighten(@color-error, 25%);
+  background-color: @background-color-error
+}

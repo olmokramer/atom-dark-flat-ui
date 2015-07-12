@@ -1,6 +1,8 @@
+@import "ui-mixins";
 @import "ui-variables";
+@import "alert";
 
-body .settings-view {
+.settings-view {
 	.section .section-heading,
 	section .section-heading {
 		color: @text-color;
@@ -9,10 +11,74 @@ body .settings-view {
 	.config-menu {
 		background: @dark-flat-ui-dark-gray;
 		padding-top: 0;
+
+		.nav li.active .icon:before {
+			.accent(color);
+		}
 	}
 
-	.table th,
-	.table td {
-		border-color: @dark-flat-ui-dark-gray;
+	.btn.active-theme-settings {
+		margin-left: 0;
+	}
+
+	input[type="checkbox"]:checked {
+		.accent(background-color);
+	}
+
+	.package-card {
+		border: none;
+		background-color: @dark-flat-ui-light-gray;
+
+		&:hover {
+			background-color: lighten(@dark-flat-ui-light-gray, 3%);
+			color: @text-color-highlight;
+
+			.stats .stats-item .icon {
+				.accent(color);
+			}
+		}
+
+		.card-name a {
+			font-size: 22px;
+			color: inherit;
+		}
+	}
+
+	.alert {
+		background-color: @dark-flat-ui-light-gray;
+		color: @text-color-highlight;
+
+		&:hover {
+			background-color: lighten(@dark-flat-ui-light-gray, 3%);
+		}
+
+		&.featured-message {
+			margin: 10px 0;
+		}
+
+		.icon.close {
+			color: @text-color;
+
+			&:hover {
+				color: @text-color-highlight;
+			}
+		}
+	}
+
+	.packages .error-message {
+		padding: 0;
+
+		.padded {
+			padding-left: 0;
+		}
+	}
+
+	.table {
+		margin-bottom: 0;
+
+		th,
+		td {
+			border-color: @dark-flat-ui-dark-gray;
+		}
 	}
 }

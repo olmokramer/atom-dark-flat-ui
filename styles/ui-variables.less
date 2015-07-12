@@ -4,32 +4,40 @@
 @dark-flat-ui-gray: #2d2d2d;
 @dark-flat-ui-dark-gray: #222;
 @dark-flat-ui-super-duper-dark-gray: #191919;
-@color-accent: #ee3d3d;
 
-;
+@color-accent-red: #ee3d3d;
+@color-accent-purple: #7c3df0;
+@color-accent-blue: #3da9ee;
+@color-accent-green: #3be770;
+
+@color-info: #298bf3;
+@color-success: #33b047;
+@color-warning: #fe6c19;
+@color-error: #ff1212;
 
 @text-color: #b0b0b0;
-@text-color-subtle: #666;
+@text-color-subtle: #7a7a7a;
 @text-color-highlight: #e0e0e0;
 @text-color-selected: @text-color-highlight;
 
-@text-color-info: #298bf3;
-@text-color-success: #33b047;
-@text-color-warning: #fe6c19;
-@text-color-error: #ff1212;
+@text-color-info: lighten(@color-info, 5%);
+@text-color-success: lighten(@color-success, 10%);
+@text-color-warning: lighten(@color-warning, 5%);
+@text-color-error: @color-error;
 
-@background-color-info: darken(@text-color-info, 10%);
-@background-color-success: darken(@text-color-success, 10%);
-@background-color-warning: darken(@text-color-warning, 15%);
-@background-color-error: darken(@text-color-error, 10%);
 @background-color-highlight: @dark-flat-ui-gray;
 @background-color-selected: @dark-flat-ui-light-gray;
 
-@text-color-ignored: @text-color-subtle;
-@text-color-added: #33b038;
-@text-color-renamed: #59a5f6;
-@text-color-modified: #f69149;
-@text-color-removed: #ee3d3d;
+@background-color-info: darken(@color-info, 18%);
+@background-color-success: darken(@color-success, 15%);
+@background-color-warning: darken(@color-warning, 15%);
+@background-color-error: darken(@color-error, 20%);
+
+@text-color-ignored: lighten(@text-color-subtle, 4%);
+@text-color-added: @color-success;
+@text-color-renamed: @color-info;
+@text-color-modified: @color-warning;
+@text-color-removed: @color-error;
 
 @app-background-color: @dark-flat-ui-gray;
 
@@ -71,9 +79,9 @@
 @scrollbar-background-color: @dark-flat-ui-gray;
 @scrollbar-color: @dark-flat-ui-light-gray;
 
-@ui-site-color-1: @background-color-success; // green
-@ui-site-color-2: @background-color-info; // blue
-@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-1: #17ca65; // green
+@ui-site-color-2: #0098ff; // blue
+@ui-site-color-3: #ff4800; // orange
 @ui-site-color-4: #db2ff4; // purple
 @ui-site-color-5: #f5e11d; // yellow
 

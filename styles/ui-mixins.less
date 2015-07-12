@@ -26,3 +26,39 @@
 .text(error) {
   color: @text-color-error;
 }
+
+.accent-transform() {
+  [data-dark-flat-ui-accent-color="red"] & {
+    .transform(@color-accent-red);
+  }
+
+  [data-dark-flat-ui-accent-color="purple"] & {
+    .transform(@color-accent-purple);
+  }
+
+  [data-dark-flat-ui-accent-color="blue"] & {
+    .transform(@color-accent-blue);
+  }
+
+  [data-dark-flat-ui-accent-color="green"] & {
+    .transform(@color-accent-green);
+  }
+}
+
+.accent(@prop) {
+  [data-dark-flat-ui-accent-color="red"] & {
+    @{prop}: @color-accent-red;
+  }
+
+  [data-dark-flat-ui-accent-color="purple"] & {
+    @{prop}: @color-accent-purple;
+  }
+
+  [data-dark-flat-ui-accent-color="blue"] & {
+    @{prop}: @color-accent-blue;
+  }
+
+  [data-dark-flat-ui-accent-color="green"] & {
+    @{prop}: @color-accent-green;
+  }
+}
