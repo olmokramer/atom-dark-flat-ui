@@ -4,6 +4,13 @@
   "main": "lib/dark-flat-ui",
   "version": "1.2.0",
   "description": "A dark flat ui theme",
+  "keywords": [
+    "dark",
+    "flat",
+    "ui",
+    "grey",
+    "gray"
+  ],
   "repository": "https://github.com/olmokramer/atom-dark-flat-ui",
   "license": "MIT",
   "engines": {
