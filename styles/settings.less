@@ -21,8 +21,25 @@
 		margin-left: 0;
 	}
 
-	input[type="checkbox"]:checked {
+	atom-text-editor[mini]:hover {
+		background-color: @dark-flat-ui-super-duper-dark-gray;
+	}
+
+	input[type="checkbox"]:checked,
+	input[type="checkbox"]:active {
 		.accent(background-color);
+	}
+
+	select.form-control {
+		opacity: .75;
+
+		&:hover {
+//			background-color: @dark-flat-ui-super-duper-dark-gray;
+		}
+
+		&:active {
+			opacity: 1;
+		}
 	}
 
 	.package-card {
